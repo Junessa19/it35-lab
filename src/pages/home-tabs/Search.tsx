@@ -21,15 +21,16 @@ const Search: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
       <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-        }}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+          }}
         >
           Search
         </div>
+
       </IonContent>
     </IonPage>
   );
