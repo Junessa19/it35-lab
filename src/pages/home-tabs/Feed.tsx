@@ -20,10 +20,10 @@ const Feed: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div
+      <div
         style={{
           display: 'flex',
-          alignContent: 'center',
+          alignItems: 'center',
           justifyContent: 'center',
           height: '100%',
         }}
