@@ -3,6 +3,8 @@ import {
   IonButtons,
     IonContent, 
     IonHeader, 
+    IonInput, 
+    IonInputPasswordToggle, 
     IonMenuButton, 
     IonPage, 
     IonTitle, 
@@ -23,6 +25,9 @@ const Login: React.FC = () => {
           <IonTitle>Login</IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonInput type="password" label="Password" value="NeverGonnaGiveYouUp">
+      <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+    </IonInput>
       <IonContent className='ion-padding'>
           <IonButton onClick={() => doLogin()} expand="full">
               Login
