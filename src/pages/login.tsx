@@ -47,7 +47,7 @@ import { logoFacebook, logoInstagram, logoIonic, logoTwitter } from 'ionicons/ic
                       overflow: 'hidden' 
                     }}
                   >
-        <img alt="" src="https://www.instagram.com/" />
+        <img alt="" src="https://www.freepik.com/premium-vector/cute-happy-pig-sitting-cartoon-vector-white-background_135404926.htm/" />
                     {
                      <IonIcon 
                       icon={logoInstagram}
