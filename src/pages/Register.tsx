@@ -18,11 +18,11 @@ import {
             </IonButtons>
             <IonTitle>Register</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader>  
         <IonContent fullscreen>
         </IonContent>
       </IonPage>
     );
   };
   
-  export default Register;
+  export default Register

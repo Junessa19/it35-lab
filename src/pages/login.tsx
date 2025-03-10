@@ -22,6 +22,9 @@ import { logoFacebook, logoInstagram, logoIonic, logoTwitter } from 'ionicons/ic
     const doLogin = () => {
         navigation.push('/it35-lab/app','forward','replace');
     }
+    const Signup = () => {
+      navigation.push('/it35-lab/app','forward','replace');
+  }
     return (
       <IonPage>
         <IonContent className='ion-padding'>
@@ -74,6 +77,9 @@ import { logoFacebook, logoInstagram, logoIonic, logoTwitter } from 'ionicons/ic
     </IonInput>
             <IonButton onClick={() => doLogin()} expand="full">
                 Login
+                </IonButton>
+                <IonButton onClick={() => Signup()} expand="full">
+                Signup
             </IonButton>
         </IonContent>
       </IonPage>
