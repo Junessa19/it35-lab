@@ -1,78 +1,90 @@
-import { 
+
+import {
   IonButtons,
   IonButton,
-  IonContent, 
-  IonHeader, 
-  IonInput, 
-  IonItem, 
-  IonList, 
-  IonPage, 
-  IonTitle, 
-  IonToolbar
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonList,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  useIonRouter,
 } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface RegisterProps {
-  onClose: () => void; // Function to close register
+  onClose: () => void;
 }
 
 const Register: React.FC<RegisterProps> = ({ onClose }) => {
+  const router = useIonRouter();
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [formData, setFormData] = useState({
+    userName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const handleChange = (e: CustomEvent) => {
+    const { name, value } = e.detail;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = () => {
+    if (!formData.email || !formData.password || (isRegistering && (!formData.userName || !formData.confirmPassword))) {
+      alert('All fields are required!');
+      return;
+    }
+    if (isRegistering && formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+    alert(isRegistering ? 'Registration Successful!' : 'Login Successful!');
+    router.push('/home');
+  };
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Register</IonTitle>
+          <IonTitle>{isRegistering ? 'Register' : 'Login'}</IonTitle>
           <IonButtons slot="end">
-            <IonButton onClick={onClose}>Close</IonButton>
+            <IonButton onClick={() => setIsRegistering(!isRegistering)}>
+              {isRegistering ? 'Go to Login' : 'Sign Up'}
+            </IonButton>
           </IonButtons>
         </IonToolbar>
-      </IonHeader>  
+      </IonHeader>
 
       <IonContent fullscreen className="register-content">
-        <style>
-          {`
-            .register-content {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              height: 100vh;
-            }
-
-            .register-box {
-              width: 90%;
-              max-width: 400px;
-              background: rgba(255, 255, 255, 0.2);
-              padding: 30px;
-              border-radius: 15px;
-              backdrop-filter: blur(10px);
-              box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-              text-align: center;
-            }
-          `}
-        </style>
-
         <div className="register-box">
           <IonList>
+            {isRegistering && (
+              <IonItem>
+                <IonInput name="userName" value={formData.userName} onIonChange={handleChange} label="User Name" placeholder="Name" />
+              </IonItem>
+            )}
+
             <IonItem>
-              <IonInput label="User Name" placeholder="Name"></IonInput>
+              <IonInput name="email" type="email" value={formData.email} onIonChange={handleChange} label="Email" placeholder="email@domain.com" />
             </IonItem>
 
             <IonItem>
-              <IonInput label="Email" type="email" placeholder="email@domain.com"></IonInput>
+              <IonInput name="password" type="password" value={formData.password} onIonChange={handleChange} label="Password" />
             </IonItem>
 
-            <IonItem>
-              <IonInput label="Password" type="password"></IonInput>
-            </IonItem>
-
-            <IonItem>
-              <IonInput label="Confirm Password" type="password"></IonInput>
-            </IonItem>
+            {isRegistering && (
+              <IonItem>
+                <IonInput name="confirmPassword" type="password" value={formData.confirmPassword} onIonChange={handleChange} label="Confirm Password" />
+              </IonItem>
+            )}
           </IonList>
 
-          <IonButton expand="full" style={{ marginTop: '20px' }}>
-            Register
+          <IonButton expand="full" style={{ marginTop: '20px' }} onClick={handleSubmit}>
+            {isRegistering ? 'Register' : 'Login'}
           </IonButton>
         </div>
       </IonContent>
