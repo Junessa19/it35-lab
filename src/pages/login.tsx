@@ -8,12 +8,18 @@ import {
   IonPage, 
   useIonRouter
 } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Login: React.FC = () => {
   const navigation = useIonRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const doLogin = () => {
+    if (!email || !password) {
+      alert('Please enter your email and password.');
+      return;
+    }
     navigation.push('/it35-lab/app', 'forward', 'replace'); 
   };
 
@@ -25,8 +31,8 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent fullscreen className="login-content">
         <style>
-          {`
-            @keyframes gradientMove {
+          {
+            `@keyframes gradientMove {
               0% { background-position: 0% 50%; }
               50% { background-position: 100% 50%; }
               100% { background-position: 0% 50%; }
@@ -83,11 +89,10 @@ const Login: React.FC = () => {
             @keyframes bounce {
               0%, 100% { transform: translateY(0); }
               50% { transform: translateY(-10px); }
-            }
-          `}
+            }`
+          }
         </style>
 
-      
         <div className="login-box">
           <IonAvatar className="avatar">
             <img 
@@ -100,11 +105,22 @@ const Login: React.FC = () => {
           <h1 style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}>USER LOGIN</h1>
 
           <IonItem style={{ width: '100%', marginBottom: '10px', borderRadius: '10px', overflow: 'hidden' }}>
-            <IonInput label="Email" type="email" placeholder="Enter your email"></IonInput>
+            <IonInput 
+              label="Email" 
+              type="email" 
+              placeholder="Enter your email" 
+              value={email} 
+              onIonChange={(e) => setEmail(e.detail.value!)}
+            />
           </IonItem>
 
           <IonItem style={{ width: '100%', marginBottom: '20px', borderRadius: '10px', overflow: 'hidden' }}>
-            <IonInput type="password" label="Password">
+            <IonInput 
+              type="password" 
+              label="Password"
+              value={password} 
+              onIonChange={(e) => setPassword(e.detail.value!)}
+            >
               <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
             </IonInput>
           </IonItem>
