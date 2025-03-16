@@ -1,60 +1,83 @@
 import { 
-    IonButtons,
-      IonContent, 
-      IonHeader, 
-      IonInput, 
-      IonItem, 
-      IonList, 
-      IonMenuButton, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar, 
-      useIonRouter
-  } from '@ionic/react';
-  
-  
- const Register: React.FC = () => {
-   const navigation = useIonRouter();
-   const doSignup = () => {
-    navigation.push('/Register', 'forward', 'replace'); 
-  };
+  IonButtons,
+  IonButton,
+  IonContent, 
+  IonHeader, 
+  IonInput, 
+  IonItem, 
+  IonList, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar
+} from '@ionic/react';
+import React from 'react';
 
-  
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot='start'>
-              <IonMenuButton></IonMenuButton>
-            </IonButtons>
-            <IonTitle>Register</IonTitle>
-          </IonToolbar>
-        </IonHeader>  
-        <IonContent fullscreen>
-        <IonList>
-      <IonItem>
-        <IonInput label="User Name" placeholder="Name"></IonInput>
-      </IonItem>
+interface RegisterProps {
+  onClose: () => void; // Function to close register
+}
 
-      <IonItem>
-        <IonInput label="Email input" type="email" placeholder="email@domain.com"></IonInput>
-      </IonItem>
+const Register: React.FC<RegisterProps> = ({ onClose }) => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Register</IonTitle>
+          <IonButtons slot="end">
+            <IonButton onClick={onClose}>Close</IonButton>
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>  
 
-      <IonItem>
-        <IonInput label="Password input" type="password" value="password"></IonInput>
-      </IonItem>
+      <IonContent fullscreen className="register-content">
+        <style>
+          {`
+            .register-content {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: 100vh;
+            }
 
-      <IonItem>
-        <IonInput label="Confirm Password" type="password" value="password"></IonInput>
-      </IonItem>
+            .register-box {
+              width: 90%;
+              max-width: 400px;
+              background: rgba(255, 255, 255, 0.2);
+              padding: 30px;
+              border-radius: 15px;
+              backdrop-filter: blur(10px);
+              box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+              text-align: center;
+            }
+          `}
+        </style>
 
-      
+        <div className="register-box">
+          <IonList>
+            <IonItem>
+              <IonInput label="User Name" placeholder="Name"></IonInput>
+            </IonItem>
 
-    </IonList>
+            <IonItem>
+              <IonInput label="Email" type="email" placeholder="email@domain.com"></IonInput>
+            </IonItem>
 
-        </IonContent>
-      </IonPage>
-    );
-  };
-  
-  export default Register;
+            <IonItem>
+              <IonInput label="Password" type="password"></IonInput>
+            </IonItem>
+
+            <IonItem>
+              <IonInput label="Confirm Password" type="password"></IonInput>
+            </IonItem>
+          </IonList>
+
+          <IonButton expand="full" style={{ marginTop: '20px' }}>
+            Register
+          </IonButton>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Register;
