@@ -97,7 +97,7 @@ const Login: React.FC = () => {
           <IonAvatar className="avatar">
             <img 
               alt="User Avatar" 
-              src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-1/482960212_1178171297241212_1902480851555599092_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeF_6gU2bXql48gU8UAqKe-sKBBW1pU6VfwoEFbWlTpV_JUuDAXHuNc0eoQ6WiYKPUtrHRAqbPOAoXdtuR80coDM&_nc_ohc=ctQ-a1bN3wcQ7kNvgH6Tv6m&_nc_oc=Adg4coAWfilOTJTnsTFbRRdNKB4Ha7caLk-3GGKHIA4OfOrAU-4y7AWRzzEJq3itzNQ&_nc_zt=24&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=fYAr391VP_5zOBAYyLYejQ&oh=00_AYG8rnPA5ZRWEiNpeSU0e_gXUqnyr4XiooJUKRv4HCUm7g&oe=67DBF69E" 
+              src="https://imgs.search.brave.com/2gScWklfgtjah2En0xc-YgiCtpSB0ZXf9k4RCs_SMcc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzAy/L0VtYmxlbS1JbnN0/YWdyYW0tNTAweDUw/MC5qcGc://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-1/482960212_1178171297241212_1902480851555599092_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeF_6gU2bXql48gU8UAqKe-sKBBW1pU6VfwoEFbWlTpV_JUuDAXHuNc0eoQ6WiYKPUtrHRAqbPOAoXdtuR80coDM&_nc_ohc=ctQ-a1bN3wcQ7kNvgH6Tv6m&_nc_oc=Adg4coAWfilOTJTnsTFbRRdNKB4Ha7caLk-3GGKHIA4OfOrAU-4y7AWRzzEJq3itzNQ&_nc_zt=24&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=fYAr391VP_5zOBAYyLYejQ&oh=00_AYG8rnPA5ZRWEiNpeSU0e_gXUqnyr4XiooJUKRv4HCUm7g&oe=67DBF69E" 
               style={{ width: '100%', height: '100%' }} 
             />
           </IonAvatar>
