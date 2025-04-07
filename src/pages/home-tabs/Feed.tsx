@@ -15,7 +15,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 
-const profileImage = "https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/480911740_1164805541911121_1749932665810875565_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFkoVA6-VrRjnE7gNk6yE1-gWU6oS2eOiOBZTqhLZ46I8iKb0xtij6knYS_RvSezdp2jStJ148hZkx5_9g7jNn4&_nc_ohc=gNGg17znGGEQ7kNvgF2sa8M&_nc_oc=AdhFLmNfatTxQpiQ9cb0gmJd00Fl0s7KVtvQyarP_lJuimoaWYiPwFHg3SUTxz7CsXs&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=AYdKeotLZqTOKQ58rKP0BYG&oh=00_AYGGOmezRSuUyS3EB6N142G9SSRCxhzqh3eiKpAvDhJ4CQ&oe=67D18FE8";
+const profileImage = "https://dwezgqoxmzopbmjjnzzs.supabase.co/storage/v1/object/public/user-avatars/avatars/images.jpg";
 
 const images = [
   { url: "https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/481197634_1164636125261396_2732540088613659479_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeENkwXfG9cxwRzHros6BySjNH1gUxeKDNU0fWBTF4oM1fy5Zl102VjQzfnsmBdkYzLk1HY2wpZn_PYowwlQhKJo&_nc_ohc=aubNhDqPML4Q7kNvgGjQuLQ&_nc_oc=AdjIgnNREB4-dDN7kqZMF8YNhxu3TqaSM0TqxX2v3BcrcYmF6KBbZcMO2ph2UGcgOy8&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=AFrSN72k-7L3r7pD_3KnOmX&oh=00_AYGRUoY2PIdWAkFeLBPq0TpFvbPz7qBdSHnU6ithVlBTPQ&oe=67D19692", description: "QUADRO" },
