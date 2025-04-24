@@ -78,7 +78,7 @@ const Login: React.FC = () => {
             fontWeight: 'bold',
             color: '#d35400',
           }}>
-            Welcome Back!
+            User
           </h2>
 
           <div style={{ width: '100%', padding: '0 20px' }}>
