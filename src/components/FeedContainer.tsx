@@ -9,7 +9,7 @@ import { User } from '@supabase/supabase-js';
 import { supabase } from '../utils/supabaseClient';
 import { pencil } from 'ionicons/icons';
 
-import './FeedContainer.css'; // 👈 Import CSS styles
+import './FeedContainer.css'; 
 
 interface Post {
   post_id: string;
