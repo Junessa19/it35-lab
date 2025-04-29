@@ -4,6 +4,7 @@ import {
     IonHeader, 
     IonMenuButton, 
     IonPage, 
+    IonSearchbar, 
     IonTitle, 
     IonToolbar 
 } from '@ionic/react';
@@ -11,29 +12,16 @@ import {
 const Search: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot='start'>
-            <IonMenuButton></IonMenuButton>
-          </IonButtons>
-          <IonTitle>Search</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-      <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-          }}
-        >
-          Search
-        </div>
-
-      </IonContent>
+    <IonHeader>
+      <IonToolbar>
+        <IonTitle>Toolbar</IonTitle>
+      </IonToolbar>
+      <IonToolbar>
+        <IonSearchbar></IonSearchbar>
+      </IonToolbar>
+    </IonHeader>
     </IonPage>
   );
-};
+}
 
 export default Search;
