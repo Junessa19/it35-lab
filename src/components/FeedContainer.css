@@ -1,0 +1,32 @@
+.feed-container {
+  background: linear-gradient(to bottom right, #ffe6f0, #ffccda);
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: url('/assets/butterfly-bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 150px;
+}
+
+.create-post-card {
+  background-color: #ffdee9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+}
+
+.post-card {
+  background-color: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+.ion-title-custom {
+  color: #d63384;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.ion-button-custom {
+  background-color: #ff69b4;
+  color: white;
+  border-radius: 15px;
+}
