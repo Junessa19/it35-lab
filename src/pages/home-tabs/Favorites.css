@@ -1,9 +1,9 @@
-.food-grid {
+.music-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 16px;
 }
 
-.food-card {
+music-card {
   margin: 0;
 }
