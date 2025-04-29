@@ -22,7 +22,7 @@ const Favorites: React.FC = () => {
     },
     {
       name: 'Pizza',
-      image: '/assets/images/sushi.jpg',
+      image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
       description: 'Assorted sushi rolls with wasabi and soy sauce.'
     },
     {
