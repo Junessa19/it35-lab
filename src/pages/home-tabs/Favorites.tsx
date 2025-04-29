@@ -27,7 +27,7 @@ const Favorites: React.FC = () => {
     },
     {
       name: 'Chocolate Cake',
-      image: '/assets/images/cake.jpg',
+      image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80',
       description: 'Rich and moist chocolate cake with fudge icing.'
     }
   ];
