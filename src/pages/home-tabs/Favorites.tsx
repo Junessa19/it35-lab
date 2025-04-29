@@ -17,7 +17,7 @@ const Favorites: React.FC = () => {
   const favoriteFoods = [
     {
       name: 'Burger',
-      image: 'c:\Users\NEC\Downloads\burger  ngani.jpg',
+      image: 'https://images.unsplash.com/photo-1594007654729-407eedc4be90?auto=format&fit=crop&w=800&q=80',
       description: 'Classic delight with fresh mozzarella and basil.'
     },
     {
